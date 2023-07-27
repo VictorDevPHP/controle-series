@@ -1,15 +1,16 @@
 <x-layout title="Series">
 
-<ul>
-    @foreach ($series as $serie)
-        <li>{{$serie}}</li>
-    @endforeach
-</ul>
+    <a href="/series/criar" class="btn btn-dark mb-2">Adicionar</a>
+    <ul class="list-group">
+        @foreach ($series as $serie)
+            <li class="list-group-item">{{ $serie }}</li>
+        @endforeach
+    </ul>
 
 
-{{-- trazendo para o Js --}}
-{{-- <script>
+    {{-- trazendo para o Js --}}
+    {{-- <script>
     const series = {{Js::from($series)}}; 
-</script> --}}
+    </script> --}}
 
-</x-layout> 
+</x-layout>
