@@ -23,6 +23,11 @@ class SeriesController extends Controller
 
     public function store(Request $request){
         Serie::create($request->all());
-        return to_route('/');
+        return to_route('index');
     }    
+
+    public function destroy(Request $request){
+        Serie::destroy($request->serie); 
+        return to_route('index');
+    }
 } 
