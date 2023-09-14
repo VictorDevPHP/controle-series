@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\SeriesFormRequest;
 use App\Models\Serie;
+use App\Models\Season;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -40,7 +41,8 @@ class SeriesController extends Controller
     }
 
     public function edit(Serie $series)
-    {
+    {   
+        dd($series->temporadas); 
         return view('series.edit')->with('serie', $series);
     }
 
